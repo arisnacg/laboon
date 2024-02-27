@@ -2,9 +2,10 @@ package bubletea
 
 import (
 	"fmt"
+	"os"
+
 	"github.com/arisnacg/laboon/internal/color"
 	"github.com/arisnacg/laboon/internal/docker"
-	"os"
 
 	"github.com/charmbracelet/bubbles/key"
 	"github.com/charmbracelet/bubbles/list"
@@ -310,7 +311,7 @@ func Start() {
 	p := tea.NewProgram(m, tea.WithAltScreen())
 
 	if _, err := p.Run(); err != nil {
-		fmt.Println("Error running program:", err)
+		fmt.Println(err)
 		os.Exit(1)
 	}
 }
