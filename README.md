@@ -12,6 +12,13 @@ Simple TUI of Docker Desktop written in [Go](https://golang.org/) and [Bubbletea
 
 ## Installation
 
+via Homebrew
+```bash
+brew tap arisnacg/cli
+brew install laboon
+```
+
+via Go
 ```bash
 go install github.com/arisnacg/laboon@latest
 ```
