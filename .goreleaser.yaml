@@ -25,7 +25,7 @@ brews:
     homepage: https://github.com/arisnacg/laboon
     repository:
       owner: arisnacg
-      name: homebrew-arisnacg
+      name: homebrew-cli
     commit_author:
       name: arisnacg
       email: agus.aris83@gmail.com
