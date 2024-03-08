@@ -23,7 +23,7 @@ release:
 brews:
   - name: laboon
     homepage: https://github.com/arisnacg/laboon
-    tap:
+    repository:
       owner: arisnacg
       name: homebrew-arisnacg
     commit_author:
