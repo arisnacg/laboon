@@ -1,11 +1,3 @@
-# This is an example .goreleaser.yml file with some sensible defaults.
-# Make sure to check the documentation at https://goreleaser.com
-
-# The lines below are called `modelines`. See `:help modeline`
-# Feel free to remove those if you don't want/need to use them.
-# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
-# vim: set ts=2 sw=2 tw=0 fo=cnqoj
-
 version: 1
 
 before:
@@ -18,10 +10,29 @@ before:
 builds:
   - env:
       - CGO_ENABLED=0
+    binary: laboon
     goos:
       - linux
       - windows
       - darwin
+    flags:
+      - -mod=vendor
+release:
+  prerelease: auto
+
+brews:
+  - name: laboon
+    homepage: https://github.com/arisnacg/laboon
+    tap:
+      owner: arisnacg
+      name: homebrew-arisnacg
+    commit_author:
+      name: arisnacg
+      email: agus.aris83@gmail.com
+
+checksum:
+  name_template: 'checksums.txt'
+      
 
 archives:
   - format: tar.gz
